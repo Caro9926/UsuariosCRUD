@@ -1,10 +1,10 @@
 #Esta es una adaptación del código de Coding Dojo
 
 from flask import Flask, render_template, request, redirect
+from usuarios_app import app
 
 from users import User
 
-app=Flask(__name__)
 
 @app.route('/')
 def index():
@@ -56,5 +56,3 @@ def destroy(id):
     User.destroy(data)
     return redirect('/users')
 
-if __name__=="__main__":
-    app.run(debug=True)
