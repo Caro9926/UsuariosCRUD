@@ -1,4 +1,3 @@
-from flask import Flask
 from usuarios_app import app
 from usuarios_app.controladores import controlador_usuarios
 
